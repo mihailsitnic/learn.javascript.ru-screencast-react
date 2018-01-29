@@ -1,5 +1,6 @@
 ### yarn create react-app my-app
 ### atom .
+### yarn add bootstrap@next
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
