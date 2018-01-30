@@ -8,6 +8,7 @@ class App extends Component {
         reverted: false
     }
     render() {
+        console.log('---', 2, this.state);
         return (
             <div className="container">
                 <div className="jumbotron">
@@ -16,13 +17,16 @@ class App extends Component {
                         <button className="btn" onClick={this.revert}>Revert</button>
                     </h1>
                 </div>
-                <ArticleList articles={this.state.reverted ? articles.reverse() : articles} />
+                <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles} />
             </div>
         )
     }
-    revert = () => this.setState({
-        reverted: !this.state.reverted
-    })
+    revert = () => {
+        console.log('---', 1);
+        this.setState({
+            reverted: !this.state.reverted
+        })
+    }
 }
 
 export default App
